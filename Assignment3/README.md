@@ -6,11 +6,6 @@ Meeting on Saturday, September 27th
 
 Goal: get git working for everyone
 
-Roles:
-
-Team1
-=====
-
   Member      |     Role
 ------------- | -------------
 Ben Israel    | question asker
@@ -30,6 +25,8 @@ Meeting time: 1hr 30 min
 
 Meeting on Thursday, October 2nd
 --------------------------------
+
+Goal: start assignment 3 questions 6, 7
 
   Member      |     Role
 ------------- | -------------
