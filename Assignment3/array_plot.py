@@ -5,17 +5,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-def plot_array(array):
-    '''Part 1: Plot an array using pcolor'''
-    plt.pcolor(array)
+def plot_array(array, title):
+    '''Part 1: Plot an array using pcolor and title it'''
+    plt.pcolor(array, vmin=0, vmax=1) #1/up=red, 0/down=blue
+    plt.title=title
+    print title
     plt.show()
 
 def create_uniform_array(n, state):
-    '''Part 5: Returns an nxn array with all up or all down'''
-    if state: #All up or all down?
+    '''Part 4: Returns an nxn array with all up or all down'''
+    if state: #1=up, 0=down
         return np.ones((n,n))
     else:
         return np.zeros((n,n))
+
+def create_random_array(n,p):
+    '''Part 5: Returns an nxn array with random cell values'''
+    #Evaluate a random number in [0,1) for each cell in an nxn array
+    return np.array([[int(random.random()<.5)\
+             for i in range(n)] for j in range(n)])
 
 def create_probability_array(n,p):
     '''Part 6: Returns an nxn array with p probability of up in each cell'''
