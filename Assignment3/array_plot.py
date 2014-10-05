@@ -23,9 +23,10 @@ def create_probability_array(n,p):
     return np.array([[int(random.random()<p)\
              for i in range(n)] for j in range(n)])
 
-def boltzman(E,T):
-    '''Part 7: Determine the Boltzman probability for a given E and T'''
+def boltzmann(E,T):
+    '''Part 7: Determine the Boltzmann probability for a given E and T'''
     return np.exp(-E/T)
 
-plot_array(create_probability_array(7,.25))
-print boltzman(3,2)
+def create_boltzmann_array(n,T):
+    '''Part 8: Create an nxn array using Boltzmann probability at E=1, T'''
+    return create_probability_array(n,.5*boltzmann(1,T))
