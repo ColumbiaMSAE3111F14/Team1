@@ -8,8 +8,7 @@ import random
 def plot_array(array, title):
     '''Part 1: Plot an array using pcolor and title it'''
     plt.pcolor(array, vmin=0, vmax=1) #1/up=red, 0/down=blue
-    plt.title=title
-    print title
+    plt.title(title)
     plt.show()
 
 def create_uniform_array(n, state):
