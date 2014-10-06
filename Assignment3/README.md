@@ -8,7 +8,7 @@ Goal: get git working for everyone
 
   Member      |     Role
 ------------- | -------------
-Ben Israel    | question asker
+Ben Israeli    | question asker
 Chris Florencio-Aleman  | leader
 Kathleen Kennedy  | Zuckerberg
 Sean Ballinger  | scribe
@@ -30,7 +30,7 @@ Goal: start assignment 3 questions 6, 7
 
   Member      |     Role
 ------------- | -------------
-Ben Israel    | scribe
+Ben Israeli    | scribe
 Chris Florencio-Aleman  | absent
 Kathleen Kennedy  | question asker
 Sean Ballinger  | Zuckerberg
@@ -49,21 +49,19 @@ Meeting time: 2hr 30 min
 Meeting on Sunday, October 5th
 ------------------------------
 
-Observations/Notes for 7.9:
+  Member      |     Role
+------------- | -------------
+Ben Israeli    | Zuckerberg
+Chris Florencio-Aleman  | question asker
+Kathleen Kennedy  | absent
+Sean Ballinger  | scribe
 
-The grid is approximately half up and half down for T=100,10. T=1 has somewhat more down than up. T=.1 has very very few up and T=.001 has none. This is consistent with the properties of the Boltzmann function.
+Found a very good resource: [PEP8 online](http://pep8online.com/)
 
-Calculated probabilities of e^(1/T)/2 for each would be:
+- Sean worked with Chris to mske reusable examples of numpy and plotting
+- Ben completed homework problem 7
+- Still can't figure out how to install git or GitHub client on Chris' computer
+- Sean converted all code to comply with PEP8 guidelines
+- Sean added results to SolutionOutputs
 
-    T|p
------|--------
-.001 |  2.537979448774728×10^-435
-.1   |  0.0000227
-1    |  0.18394
-10   |  0.452419
-100  |  0.495025
-
-
-p for T=.001 is effectively zero since the computer would round it to zero.
-
-This generally makes physical sense. Temperature has disordering effect. This must taper off at high temperature since there is an upper limit to the disorder of the system, which is defined by a perfectly even and random distribution of states. This is why the difference between T=1 and T=10 is much larger than the difference btween T=10 and T=100. The curve of the Boltzmann function has a region of exponential growth for very low T, a brief relatively linear for a middle range of T, and an assymptote at 1 for large T. The differences in probability and the resulting grids for each temperature demonstarte this.
+Meeting time: 2hr
