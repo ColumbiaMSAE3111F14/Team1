@@ -1,4 +1,5 @@
 import array_plot
+import random
 
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in a cell, wrapping around if out of bounds.'''
@@ -30,3 +31,22 @@ def energy(array):
                 energy +=1
 
     return energy
+
+def pick_spin(array, x_coord, y_coord, T):
+    '''Part 4: chooses to flip a position or keep it in original state'''
+    J = energy(array)
+    array[x_coord][y_coord] = -1 * array[x_coord][y_coord]
+    J_flip = energy(array)
+    if J > J_flip:
+        return array
+    else:
+        E = J - J_flip
+        a = random.random()
+        b = array_plot.boltzmann(E,T)
+        if a > b:
+            return array
+        else:
+            array[x_coord][y_coord] = -1 * array[x_coord][y_coord]
+            return array
+          
+    
