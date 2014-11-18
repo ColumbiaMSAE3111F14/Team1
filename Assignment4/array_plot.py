@@ -9,6 +9,8 @@ import random
 
 def plot_array(array, title):
     '''Part 1: Plot an array using pcolor and title it'''
+    plt.ylim(0, array.shape[0])
+    plt.xlim(0, array.shape[1])
     plt.pcolor(array, vmin=0, vmax=1)   # 1/up=red, 0/down=blue
     plt.title(title)
     plt.show()
@@ -22,7 +24,7 @@ def create_uniform_array(n, state):
         return np.zeros((n, n))
 
 
-def create_random_array(n, p):
+def create_random_array(n):
     '''Part 5: Returns an nxn array with random cell values'''
     # Evaluate a random number in [0,1) for each cell in an nxn array
     return np.array([[int(random.random() < .5)
@@ -38,7 +40,7 @@ def create_probability_array(n, p):
 
 def boltzmann(E, T):
     '''Part 7: Determine the Boltzmann probability for a given E and T'''
-    return np.exp(-E/T)
+    return np.exp(-E/float(T))
 
 
 def create_boltzmann_array(n, T):
