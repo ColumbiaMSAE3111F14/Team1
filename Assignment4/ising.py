@@ -24,6 +24,7 @@ def ising():
         sys.exit()
         
     array = array_plot.create_random_array(n, 0.5)
+    array_plot.plot_array(array, "Ising Model")
     for k in range(1000000):
         i = int(random.random() * n)
         j = int(random.random() * n)
@@ -96,19 +97,18 @@ def local_energy(array, i, j):
 def pick_spin(array, i, j, T):
     '''Part 4: chooses to flip a position or keep it in original state'''
     energy = local_energy(array, i, j)
-    array[i][j] = -1 * array[i][j]
+    array[i][j] = not array[i][j]
     energy_flipped = local_energy(array, i, j)
     if energy > energy_flipped:
         return array
     else:
         E = energy - energy_flipped
         a = random.random()
-        #Use boltzmann probability divided by maximum value to compare 
-        b = array_plot.boltzmann(E,T)/array_plot.boltzmann(-8,T)
+        b = array_plot.boltzmann(E,T)
         if a > b:
             return array
         else:
-            array[i][j] = -1 * array[i][j]
+            array[i][j] = not array[i][j]
             return array
 
 ising()
