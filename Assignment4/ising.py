@@ -7,32 +7,6 @@ import random
 import array_plot
 
 
-def ising():
-    '''Part 6: main routine
-
-    Initializes a random array, then randomly selects spins in
-    the configuration, flips them and chooses whether to accept
-    the change or not.
-    '''
-    try:
-        dimension = int(sys.argv[1])
-        T = float(sys.argv[2])
-    except:
-        print "Please run with arguments: ising.py <dimension of array> <temperature>"
-        sys.exit()
-
-    array = array_plot.create_random_array(dimension)
-
-    # For 1e6 samples, randomly select spin in configuration,
-    # flip spin and decide whether or not to accept change
-    for k in range(int(1e6)):
-        i = int(random.random() * dimension)
-        j = int(random.random() * dimension)
-        array[i][j] = pick_spin(array, i, j, T)
-
-    array_plot.plot_array(array, "Ising model with T = %.1fJ" % T)
-
-
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in specified cell of array, wrapping around if
     out of bounds.
@@ -119,4 +93,27 @@ def pick_spin(array, i, j, T):
             return int(not array[i][j])
 
 
-ising()
+if __name__ == "__main__":
+    '''Part 6: main routine
+
+    Initializes a random array, then randomly selects spins in
+    the configuration, flips them and chooses whether to accept
+    the change or not.
+    '''
+    try:
+        dimension = int(sys.argv[1])
+        T = float(sys.argv[2])
+    except:
+        print "Please run with arguments: ising.py <dimension of array> <temperature>"
+        sys.exit()
+
+    array = array_plot.create_random_array(dimension)
+
+    # For 1e6 samples, randomly select spin in configuration,
+    # flip spin and decide whether or not to accept change
+    for k in range(int(1e6)):
+        i = int(random.random() * dimension)
+        j = int(random.random() * dimension)
+        array[i][j] = pick_spin(array, i, j, T)
+
+    array_plot.plot_array(array, "Ising model with T = %.1fJ" % T)
