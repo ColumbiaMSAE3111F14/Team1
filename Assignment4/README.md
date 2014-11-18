@@ -9,8 +9,8 @@ Assignment4
 
 Please see SolutionOutputs folder.
 
-Meeting on Sundary, November 16th
----------------------------------
+Meeting on Sunday, November 16th
+--------------------------------
 
 Goal: complete ising model
 
