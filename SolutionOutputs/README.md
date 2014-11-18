@@ -1,3 +1,19 @@
+### Output and notes for Homework 7 PP10
+
+100x100 grid, 1J temperature:
+
+![](ising_100_1.png)
+
+150x150 grid, 0.1J, 1J, and 10J temperature:
+
+![](ising_150_0.1.png)
+![](ising_150_1.png)
+![](ising_150_10.png)
+
+For funsies, 500x500 at 1J: 
+
+![](ising_500_1.png)
+
 ### Output and notes for Homework 3 PP6
 
 ![](pv.png)
