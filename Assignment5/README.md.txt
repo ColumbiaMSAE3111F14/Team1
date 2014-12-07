@@ -1,19 +1,23 @@
-Assignment4
-How to run
+Assignment5
+===========
+### How to run 
 
-python ising.py <dimension of array> <temperature>
-Output
+  python ising.py <dimension of array> <temperature>
+
+### Output
 
 Please see SolutionOutputs folder.
 
-Meeting on Sunday, November 16th
+Meeting on Sunday, December 7th
+--------------------------------
 
-Goal: complete ising model
+Goal: complete movie, equilibrium calculation, and entropy calculation
 
 Present: everyone
 
-Member	Role
-Ben Israeli	Zuckerberg
-Chris Florencio-Aleman	question asker
-Kathleen Kennedy	leader
-Sean Ballinger	scribe
+Member        |     Role
+------------- | -------------
+Ben Israeli    | Zuckerberg
+Chris Florencio-Aleman  | question asker
+Kathleen Kennedy  | leader
+Sean Ballinger  | scribe
