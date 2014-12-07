@@ -93,6 +93,38 @@ def pick_spin(array, i, j, T):
             return int(not array[i][j])
 
 
+def get_N_up(array):
+    '''Returns the number of up cells in teh array'''
+    total = 0
+    for row in array:
+        for col in array:
+            total += array[row][col]
+
+def get_order(array):
+    '''Compute order using formula |N_up-N_down|/N'''
+    N_up = float(get_N_up(array))
+    N = float(array.shape[0]*array.shape[1])
+    return abs(N-2*N_up)/N
+
+def iterate(array, T):
+    '''Runs pick_spin on a random cell of an array.
+    This function as an iteration of the simulation.
+    Returning whether the iteration results in a change is useful for equilibrium checks.
+    '''
+    i = int(random.random() * array.shape[0])
+    j = int(random.random() * array.shape[1])
+    old_value = array[i][j]
+    array[i][j] = pick_spin(array, i, j, T)
+    return old_value == array[i][j]
+
+def run_to_equilibrium(array, T, e):
+    '''Run the array at tempurature T until no changes occur for e iterations.'''
+    count = 0 #Iterations since last change
+    while (count < e):
+        count +=iterate(array, T)
+    return array
+
+
 if __name__ == "__main__":
     '''Part 6: main routine
 
