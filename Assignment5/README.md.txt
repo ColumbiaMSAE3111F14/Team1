@@ -1,7 +1,6 @@
 Assignment5
-===========### How to run
-
-    python ising.py <dimension of array> <temperature>
+===========
+### How to run: python ising.py <dimension of array> <temperature>
 
 ### Output
 
