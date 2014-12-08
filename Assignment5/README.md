@@ -25,5 +25,5 @@ Sean Ballinger  | leader
 
 - Sean worked on animations
 - Ben worked on the order parameter
-- Kathleen worked on the entropy calcultion
+- Kathleen worked on the entropy calculation
 - All discussed results
