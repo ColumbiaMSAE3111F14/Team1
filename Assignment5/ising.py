@@ -5,8 +5,10 @@
 import sys
 import random
 import array_plot
+import math as m
 
-
+k = 1.3806488 * m.pow(10,-23)
+ 
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in specified cell of array, wrapping around if
     out of bounds.
