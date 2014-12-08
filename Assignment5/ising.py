@@ -97,8 +97,9 @@ def get_N_up(array):
     '''Returns the number of up cells in teh array'''
     total = 0
     for row in array:
-        for col in array:
-            total += array[row][col]
+        for cell in row:
+            total += cell
+    return total
 
 def get_order(array):
     '''Compute order using formula |N_up-N_down|/N'''
@@ -120,8 +121,13 @@ def iterate(array, T):
 def run_to_equilibrium(array, T, e):
     '''Run the array at tempurature T until no changes occur for e iterations.'''
     count = 0 #Iterations since last change
+    i = 0
     while (count < e):
-        count +=iterate(array, T)
+        if iterate(array, T):
+            count +=1
+        else:
+            i+=1
+            count = 0
     return array
 
 
