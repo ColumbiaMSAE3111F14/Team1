@@ -130,7 +130,7 @@ def run_to_equilibrium(array, T, e):
 def calc_entropy(array):
     '''Calculates and returns entropy for spin system using Boltzmann relation'''
     N_up = get_N_up(array)
-    N = len(array)**2
+    N = array.shape[0]*array.shape[1]
     g = m.factorial(N)/(m.factorial(N_up)*m.factorial(N-N_up))
     entropy = k * m.log(g)
     return entropy
