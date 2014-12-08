@@ -5,8 +5,10 @@
 import sys
 import random
 import array_plot
+import math as m
 
-
+k = 1.3806488 * m.pow(10,-23)
+ 
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in specified cell of array, wrapping around if
     out of bounds.
@@ -97,8 +99,13 @@ def get_N_up(array):
     '''Returns the number of up cells in teh array'''
     total = 0
     for row in array:
+<<<<<<< HEAD
         for cell in row:
             total += cell
+=======
+        for col in array:
+            total += array[row][col]
+>>>>>>> f70231d4c5c4c4c96911dd315f200baeec83d3d9
     return total
 
 def get_order(array):
@@ -130,6 +137,13 @@ def run_to_equilibrium(array, T, e):
             count = 0
     return array
 
+def calc_entropy(array):
+    '''Calculates and returns entropy for spin system using Boltzmann relation'''
+    N_up = get_N_up(array)
+    N = array.shape[0]*array.shape[1]
+    g = m.factorial(N)/(m.factorial(N_up)*m.factorial(N-N_up))
+    entropy = k * m.log(g)
+    return entropy
 
 if __name__ == "__main__":
     '''Part 6: main routine
