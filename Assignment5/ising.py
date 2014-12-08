@@ -9,7 +9,9 @@ import math as m
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 k = 1.3806488 * m.pow(10,-23)
+
 
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in specified cell of array, wrapping around if
@@ -105,11 +107,13 @@ def get_N_up(array):
             total += cell
     return total
 
+
 def get_order(array):
     '''Compute order using formula |N_up-N_down|/N'''
     N_up = float(get_N_up(array))
     N = float(array.shape[0]*array.shape[1])
     return abs(N-2*N_up)/N
+
 
 def iterate(array, T):
     '''Runs pick_spin on a random cell of an array.
@@ -122,17 +126,19 @@ def iterate(array, T):
     array[i][j] = pick_spin(array, i, j, T)
     return old_value == array[i][j]
 
+
 def run_to_equilibrium(array, T, e):
     '''Run the array at tempurature T until no changes occur for e iterations.'''
-    count = 0 #Iterations since last change
+    count = 0  # Iterations since last change
     i = 0
     while (count < e):
         if iterate(array, T):
-            count +=1
+            count += 1
         else:
-            i+=1
+            i += 1
             count = 0
     return array
+
 
 def calc_entropy(array):
     '''Calculates and returns entropy for spin system using Boltzmann relation'''
@@ -141,6 +147,7 @@ def calc_entropy(array):
     g = m.factorial(N)/(m.factorial(N_up)*m.factorial(N-N_up))
     entropy = k * m.log(g)
     return entropy
+
 
 if __name__ == "__main__":
     '''Part 6: main routine
@@ -177,4 +184,3 @@ if __name__ == "__main__":
     plt.xlabel("Temperature (J)")
     plt.ylabel("Order parameter")
     plt.show()
-
