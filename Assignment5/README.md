@@ -20,8 +20,8 @@ Member        |     Role
 ------------- | -------------
 Ben Israeli    | Zuckerberg
 Chris Florencio-Aleman  | question asker
-Kathleen Kennedy  | leader
-Sean Ballinger  | scribe
+Kathleen Kennedy  | scribe
+Sean Ballinger  | leader
 
 - Sean worked on animations
 - Ben worked on the order parameter
