@@ -1,3 +1,11 @@
+### Output and notes for Homework 8 PP11
+
+Movies: see `T10.mp4` and `T0-1.mp4` in file list, open with VLC
+
+Order parameters:
+
+![](order_params.png)
+
 ### Output and notes for Homework 7 PP10
 
 100x100 grid, 1J temperature:
