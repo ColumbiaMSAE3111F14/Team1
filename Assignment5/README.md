@@ -1,4 +1,4 @@
-Assignment4
+Assignment5
 ===========
 
 ### How to run
@@ -9,7 +9,7 @@ Assignment4
 
 Please see SolutionOutputs folder.
 
-Meeting on Sunday, November 16th
+Meeting on Sunday, December 7th
 --------------------------------
 
 Goal: complete ising model
