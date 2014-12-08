@@ -31,5 +31,7 @@ Sean Ballinger  | leader
 Comments on Animations
 ----------------------
 For T = 10J it takes ~230,000 iterations to reach equilibrium
-for T = 0.1J it takes ~270,000 iterations to reach eqiulibrium
+
+For T = 0.1J it takes ~270,000 iterations to reach eqiulibrium
+
 This is as expected because the higher temperature makes it less likely for a spin to flip to an unfavorable value according to the Boltzmann probability which depends on the value of k*T.
