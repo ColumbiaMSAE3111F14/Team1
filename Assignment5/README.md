@@ -12,7 +12,7 @@ Please see SolutionOutputs folder.
 Meeting on Sunday, December 7th
 --------------------------------
 
-Goal: complete ising model
+Goal: complete animation, equilibrium condition, entropy calculation
 
 Present: everyone
 
@@ -22,3 +22,4 @@ Ben Israeli    | Zuckerberg
 Chris Florencio-Aleman  | question asker
 Kathleen Kennedy  | leader
 Sean Ballinger  | scribe
+
