@@ -99,6 +99,7 @@ def get_N_up(array):
     for row in array:
         for col in array:
             total += array[row][col]
+    return total
 
 def get_order(array):
     '''Compute order using formula |N_up-N_down|/N'''
@@ -124,6 +125,13 @@ def run_to_equilibrium(array, T, e):
         count +=iterate(array, T)
     return array
 
+def calc_entropy(array):
+    '''Calculates and returns entropy for spin system using Boltzmann relation'''
+    N_up = get_N_up(array)
+    N = len(array)**2
+    g = m.factorial(N)/(m.factorial(N_up)*m.factorial(N-N_up))
+    entropy = k * m.log(g)
+    return entropy
 
 if __name__ == "__main__":
     '''Part 6: main routine
