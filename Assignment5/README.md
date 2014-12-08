@@ -28,8 +28,8 @@ Sean Ballinger  | leader
 - Kathleen worked on the entropy calculation
 - All discussed results
 
-Comments on Animations
-----------------------
+Comments on Animation Results
+-----------------------------
 For T = 10J it takes ~230,000 iterations to reach equilibrium
 
 For T = 0.1J it takes ~270,000 iterations to reach eqiulibrium
