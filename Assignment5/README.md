@@ -36,5 +36,5 @@ For T = 0.1J it takes ~270,000 iterations to reach eqiulibrium
 
 This is as expected because the higher temperature makes it less likely for a spin to flip to an unfavorable value according to the Boltzmann probability which depends on the value of k*T.
 
-Comments on Phase Transition and Order Parameter Results
+Comments on Phase Transition/Order Parameter Results
 --------------------------------------------------------
