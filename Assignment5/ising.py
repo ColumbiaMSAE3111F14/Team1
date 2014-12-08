@@ -6,9 +6,11 @@ import sys
 import random
 import array_plot
 import math as m
+import numpy as np
+import matplotlib.pyplot as plt
 
 k = 1.3806488 * m.pow(10,-23)
- 
+
 def spin_periodic(array, x_coord, y_coord):
     '''Part 2: return spin in specified cell of array, wrapping around if
     out of bounds.
@@ -149,18 +151,30 @@ if __name__ == "__main__":
     '''
     try:
         dimension = int(sys.argv[1])
-        T = float(sys.argv[2])
     except:
-        print "Please run with arguments: ising.py <dimension of array> <temperature>"
+        print "Please run with arguments: ising.py <dimension of array>"
         sys.exit()
 
-    array = array_plot.create_random_array(dimension)
+    temps = np.arange(0.1, 6.1, 0.1)
+    orders = []
+    orig = array_plot.create_random_array(dimension)
+    for temp in temps:
+        array = orig
+        staticness = 0
+        while True:
+            if iterate(array, temp):
+                staticness += 1
+            else:
+                staticness = 0
+            if staticness > 100000:
+                orders.append(get_order(array))
+                print "Got order parameter for %f" % temp
+                break
 
-    # For 1e6 samples, randomly select spin in configuration,
-    # flip spin and decide whether or not to accept change
-    for k in range(int(1e6)):
-        i = int(random.random() * dimension)
-        j = int(random.random() * dimension)
-        array[i][j] = pick_spin(array, i, j, T)
+    plt.figure()
+    plt.plot(temps, orders, '.')
+    plt.title("Order parameter and temperature")
+    plt.xlabel("Temperature (J)")
+    plt.ylabel("Order parameter")
+    plt.show()
 
-    array_plot.plot_array(array, "Ising model with T = %.1fJ" % T)
