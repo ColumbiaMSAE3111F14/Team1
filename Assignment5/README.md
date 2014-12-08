@@ -38,3 +38,8 @@ This is as expected because the higher temperature makes it less likely for a sp
 
 Comments on Phase Transition/Order Parameter Results
 --------------------------------------------------------
+
+
+Entropy Calculation
+-------------------
+The entropy can be calculated from the Boltzmann relation S = k*ln(g) where k is Boltzmann's constant and g is the multiplicity of the macrostate. The macrostate of the system is determined by the number of up-spins vs down-spins at any given time, so g is calculated by finding how many different configurations of the system are possible with the same number of up-spins. 
