@@ -99,13 +99,8 @@ def get_N_up(array):
     '''Returns the number of up cells in teh array'''
     total = 0
     for row in array:
-<<<<<<< HEAD
         for cell in row:
             total += cell
-=======
-        for col in array:
-            total += array[row][col]
->>>>>>> f70231d4c5c4c4c96911dd315f200baeec83d3d9
     return total
 
 def get_order(array):
