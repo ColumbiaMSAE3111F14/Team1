@@ -23,3 +23,7 @@ Chris Florencio-Aleman  | question asker
 Kathleen Kennedy  | leader
 Sean Ballinger  | scribe
 
+-Sean worked on animations
+-Ben worked on the order parameter
+-Kathleen worked on the entropy calcultion
+-All discussed results
